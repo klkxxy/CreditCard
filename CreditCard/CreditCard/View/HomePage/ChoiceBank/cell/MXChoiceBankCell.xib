@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MXChoiceBankCell">
+            <rect key="frame" x="0.0" y="0.0" width="102" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="102" height="115"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ye8-oH-4s0">
+                        <rect key="frame" x="0.0" y="0.0" width="102" height="115"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bank_icon_bjns" translatesAutoresizingMaskIntoConstraints="NO" id="AVU-rW-1JN">
+                                <rect key="frame" x="26" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="8RN-Bq-P3C"/>
+                                    <constraint firstAttribute="height" constant="50" id="Bc1-pb-HGt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国银行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X09-JZ-yl8">
+                                <rect key="frame" x="24.5" y="75" width="53.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AVU-rW-1JN" firstAttribute="centerX" secondItem="ye8-oH-4s0" secondAttribute="centerX" id="3vw-5g-dtO"/>
+                            <constraint firstItem="X09-JZ-yl8" firstAttribute="centerX" secondItem="ye8-oH-4s0" secondAttribute="centerX" id="Bzz-je-DCD"/>
+                            <constraint firstItem="X09-JZ-yl8" firstAttribute="top" secondItem="AVU-rW-1JN" secondAttribute="bottom" constant="15" id="Wvt-kR-2la"/>
+                            <constraint firstItem="AVU-rW-1JN" firstAttribute="top" secondItem="ye8-oH-4s0" secondAttribute="top" constant="10" id="foa-Hh-Edl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ye8-oH-4s0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2xE-4j-q3r"/>
+                <constraint firstAttribute="bottom" secondItem="ye8-oH-4s0" secondAttribute="bottom" id="d1O-bW-O62"/>
+                <constraint firstItem="ye8-oH-4s0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lec-2s-vgO"/>
+                <constraint firstAttribute="trailing" secondItem="ye8-oH-4s0" secondAttribute="trailing" id="oVx-aO-FAe"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="102" height="115"/>
+            <point key="canvasLocation" x="105.59999999999999" y="115.59220389805098"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bank_icon_bjns" width="49" height="49"/>
+    </resources>
+</document>
