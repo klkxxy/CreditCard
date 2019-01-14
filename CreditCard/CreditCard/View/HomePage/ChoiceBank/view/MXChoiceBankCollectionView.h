@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MXChoiceBankCollectionView : UIView
-
+@property (nonatomic , weak) UINavigationController *navigationController;
 @end
 
 NS_ASSUME_NONNULL_END

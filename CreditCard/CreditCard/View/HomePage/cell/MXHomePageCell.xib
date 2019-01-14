@@ -83,6 +83,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="account_date" destination="n2o-wH-vWj" id="99N-nB-471"/>
+                <outlet property="account_date_count" destination="dfI-sq-l0h" id="9d1-2M-sTh"/>
+                <outlet property="bank_name" destination="6vG-mP-qut" id="Hyr-yo-q7X"/>
+                <outlet property="card_num" destination="Xwx-JU-Zfo" id="0Mu-CZ-aZk"/>
+            </connections>
             <point key="canvasLocation" x="36.799999999999997" y="37.781109445277366"/>
         </tableViewCell>
     </objects>

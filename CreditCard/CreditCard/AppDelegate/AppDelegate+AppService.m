@@ -31,21 +31,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [[MXAccount sharedMXAccount] LoadTokenFromSandbox];
-    NSString *token = [MXAccount sharedMXAccount].token;
-    
-    if ([token length]) {
-        [MXPublicRequstClass getUserInfo];
-        
-        
-        MXMainController * mainTab = [[MXMainController alloc] initWithNibName:nil bundle:nil];
-        [UIApplication sharedApplication].keyWindow.rootViewController = mainTab;
-    }else{
-        MXAuthController *authVC = [[MXAuthController alloc]init];
-        LNNavigationController *nav = [[LNNavigationController alloc]initWithRootViewController: authVC];
+    MXMainController * mainTab = [[MXMainController alloc] initWithNibName:nil bundle:nil];
+    [UIApplication sharedApplication].keyWindow.rootViewController = mainTab;
 
-        [UIApplication sharedApplication].keyWindow.rootViewController = nav;
-    }
 }
 
 @end

@@ -11,6 +11,7 @@
 #import "MXHomePageTableView.h"
 
 
+
 @interface MXHomePageController ()
 @property(strong,nonatomic)MXHomePageTableView *tableview;
 @end
@@ -20,8 +21,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     self.title = @"首页";
     [self tableview];
+    
+//    // 默认配置
+//
+//    // 获取 Realm 文件的父目录
+//    NSString *folderPath = realm.configuration.fileURL.URLByDeletingLastPathComponent.path;
+//    // 禁用此目录的文件保护
+//
+//    CreditCard *card = [[CreditCard alloc] init];
+//    card.bank_name = @"中国银行";
+//    card.card_num = @"123123123";
+//    card.account_date = @"1";
+//    card.repayment_date = @"10";
+//
+//    RLMRealm *realm = [RLMRealm defaultRealm];
+//    [realm transactionWithBlock:^{
+//
+//        //存储数据
+//        [realm  addObject:card];
+//
+//        //写入数据库
+//        [realm commitWriteTransaction];
+//
+//    }];
+    
+    
+    
     
 }
 

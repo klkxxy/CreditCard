@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CreditCard.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MXHomePageCell : UITableViewCell
 + (instancetype)cellWithTableView:(UITableView *)tableView;
+
+@property (nonatomic, strong) CreditCard *model;
+
 @end
 
 NS_ASSUME_NONNULL_END

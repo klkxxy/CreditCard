@@ -10,6 +10,7 @@ static NSString *collectionCell = @"MXChoiceBankCell";
 
 #import "MXChoiceBankCollectionView.h"
 #import "MXChoiceBankCell.h"
+#import "MXAddCreditController.h"
 
 @interface MXChoiceBankCollectionView () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -63,6 +64,9 @@ static NSString *collectionCell = @"MXChoiceBankCell";
     return 10;
 }
 
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    MXAddCreditController *controller = [[MXAddCreditController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 @end

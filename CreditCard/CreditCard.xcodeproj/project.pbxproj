@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A5710D14E565BEB803F3768 /* libPods-CatchBear.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0840F0037F9DE72816D1C2EE /* libPods-CatchBear.a */; };
 		BB0F24BA21C7BEFD00676C6D /* XWPublishBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0F247821C7BEFD00676C6D /* XWPublishBaseController.m */; };
 		BB0F24BB21C7BEFD00676C6D /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = BB0F247B21C7BEFD00676C6D /* plus.png */; };
 		BB0F24BC21C7BEFD00676C6D /* ico_check_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB0F247C21C7BEFD00676C6D /* ico_check_select@2x.png */; };
@@ -71,6 +70,10 @@
 		BB8B2541219847F8005E04AE /* MXRegUserinfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8B2540219847F8005E04AE /* MXRegUserinfoController.m */; };
 		BB8B254421984881005E04AE /* MXRegUserinfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8B254321984881005E04AE /* MXRegUserinfoView.m */; };
 		BB8B254621984890005E04AE /* MXRegUserinfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8B254521984890005E04AE /* MXRegUserinfoView.xib */; };
+		BBB126D621EA032600C48229 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB126D521EA032600C48229 /* libsqlite3.tbd */; };
+		BBB126E921EB687200C48229 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB126E821EB687100C48229 /* Realm.framework */; };
+		BBB126EA21EB687200C48229 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BBB126E821EB687100C48229 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BBB126EE21EB6FFB00C48229 /* CreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB126ED21EB6FFB00C48229 /* CreditCard.m */; };
 		BBC713D6216DCA2C0043E642 /* MXAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC713D5216DCA2C0043E642 /* MXAccount.m */; };
 		BBC713DF216DD8540043E642 /* MXLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC713DC216DD8540043E642 /* MXLoginView.m */; };
 		BBC713E0216DD8540043E642 /* MXLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC713DD216DD8540043E642 /* MXLoginView.xib */; };
@@ -117,9 +120,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BBB126EB21EB687200C48229 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BBB126EA21EB687200C48229 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		058E66F667A9447C29AD95D8 /* Pods-CatchBear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchBear.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatchBear/Pods-CatchBear.release.xcconfig"; sourceTree = "<group>"; };
-		0840F0037F9DE72816D1C2EE /* libPods-CatchBear.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CatchBear.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFA315D88D3789C445BE56F /* Pods-CatchBear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchBear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatchBear/Pods-CatchBear.debug.xcconfig"; sourceTree = "<group>"; };
 		BB0F247221C7BEB400676C6D /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		BB0F247821C7BEFD00676C6D /* XWPublishBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWPublishBaseController.m; sourceTree = "<group>"; };
@@ -228,6 +244,10 @@
 		BB8B254221984881005E04AE /* MXRegUserinfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXRegUserinfoView.h; sourceTree = "<group>"; };
 		BB8B254321984881005E04AE /* MXRegUserinfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXRegUserinfoView.m; sourceTree = "<group>"; };
 		BB8B254521984890005E04AE /* MXRegUserinfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXRegUserinfoView.xib; sourceTree = "<group>"; };
+		BBB126D521EA032600C48229 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BBB126E821EB687100C48229 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		BBB126EC21EB6FFB00C48229 /* CreditCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditCard.h; sourceTree = "<group>"; };
+		BBB126ED21EB6FFB00C48229 /* CreditCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditCard.m; sourceTree = "<group>"; };
 		BBC713D4216DCA2C0043E642 /* MXAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXAccount.h; sourceTree = "<group>"; };
 		BBC713D5216DCA2C0043E642 /* MXAccount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXAccount.m; sourceTree = "<group>"; };
 		BBC713DC216DD8540043E642 /* MXLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXLoginView.m; sourceTree = "<group>"; };
@@ -288,8 +308,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB126E921EB687200C48229 /* Realm.framework in Frameworks */,
+				BBB126D621EA032600C48229 /* libsqlite3.tbd in Frameworks */,
 				BB0F24E121C7C62C00676C6D /* Photos.framework in Frameworks */,
-				3A5710D14E565BEB803F3768 /* libPods-CatchBear.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +637,8 @@
 		BB61EBF6216F8AE9005EA1A4 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				BBB126EC21EB6FFB00C48229 /* CreditCard.h */,
+				BBB126ED21EB6FFB00C48229 /* CreditCard.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -893,6 +916,7 @@
 		BBEA7A26216B68160055C925 = {
 			isa = PBXGroup;
 			children = (
+				BBB126E821EB687100C48229 /* Realm.framework */,
 				BBEA7A31216B68160055C925 /* CreditCard */,
 				BBEA7A4A216B68160055C925 /* CreditCardTests */,
 				BBEA7A55216B68160055C925 /* CreditCardUITests */,
@@ -945,8 +969,8 @@
 		DBFB412EB31E96EF8E7694AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BBB126D521EA032600C48229 /* libsqlite3.tbd */,
 				BB0F247221C7BEB400676C6D /* Photos.framework */,
-				0840F0037F9DE72816D1C2EE /* libPods-CatchBear.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -963,6 +987,7 @@
 				BBEA7A2C216B68160055C925 /* Frameworks */,
 				BBEA7A2D216B68160055C925 /* Resources */,
 				0EC537517C54C109CA16237B /* [CP] Copy Pods Resources */,
+				BBB126EB21EB687200C48229 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1216,6 +1241,7 @@
 				BBD2FC952179834E004A32BB /* MXMyTableView.m in Sources */,
 				BB0F24BA21C7BEFD00676C6D /* XWPublishBaseController.m in Sources */,
 				BBD2FC6D21761914004A32BB /* MXPublicRequstClass.m in Sources */,
+				BBB126EE21EB6FFB00C48229 /* CreditCard.m in Sources */,
 				BB0F24D021C7BEFD00676C6D /* MShowAllGroup.m in Sources */,
 				BB0F24DB21C7BEFD00676C6D /* XWPhotoCell.m in Sources */,
 				BBD2FC6A21750EAD004A32BB /* WLDecimalKeyboard.m in Sources */,
@@ -1387,6 +1413,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UYRE2EMXD8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CreditCard/HeadFile/CreditCard.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CreditCard/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1405,6 +1435,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UYRE2EMXD8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CreditCard/HeadFile/CreditCard.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CreditCard/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

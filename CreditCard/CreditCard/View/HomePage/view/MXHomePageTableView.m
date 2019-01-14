@@ -10,12 +10,13 @@
 #import "MXHomePageCell.h"
 #import "MXHomePageFootView.h"
 #import "MXChoiceBankController.h"
+#import "CreditCard.h"
 
 @interface MXHomePageTableView () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic ,strong) UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *paramsArr;
-
+@property (nonatomic, strong) RLMResults * tempArray;
 @end
 
 @implementation MXHomePageTableView
@@ -45,17 +46,30 @@
         
         [self addSubview:self.tableView];
         
+//        [self getAllCreditCard];
+        
     }
     return self;
 }
+//
+//-(void)getAllCreditCard{
+//    self.tempArray =
+//    [self.tableView reloadData];
+//
+//
+//}
+
 
 #pragma mark - UITableViewDelegate -
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return self.tempArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MXHomePageCell *cell = [MXHomePageCell cellWithTableView:tableView];
+    CreditCard *model = self.tempArray[indexPath.row];
+    cell.model = model;
+    NSLog(@"%@",self.tempArray[indexPath.row]);
 
     return cell;
 }
@@ -75,6 +89,14 @@
         _paramsArr = [[NSMutableArray alloc]init];
     }
     return _paramsArr;
+}
+
+-(RLMResults *) tempArray{
+    if (!_tempArray) {
+        _tempArray = [CreditCard allObjectsInRealm:[RLMRealm defaultRealm]];
+        [self.tableView reloadData];
+    }
+    return _tempArray;
 }
 
 @end
