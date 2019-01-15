@@ -88,6 +88,7 @@
                 <outlet property="account_date_count" destination="dfI-sq-l0h" id="9d1-2M-sTh"/>
                 <outlet property="bank_name" destination="6vG-mP-qut" id="Hyr-yo-q7X"/>
                 <outlet property="card_num" destination="Xwx-JU-Zfo" id="0Mu-CZ-aZk"/>
+                <outlet property="logo" destination="mcn-Ma-r4D" id="cGs-hH-rhG"/>
             </connections>
             <point key="canvasLocation" x="36.799999999999997" y="37.781109445277366"/>
         </tableViewCell>

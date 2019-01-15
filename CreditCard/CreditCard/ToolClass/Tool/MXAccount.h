@@ -11,6 +11,8 @@
 @interface MXAccount : NSObject
 singleton_interface(MXAccount)
 
+
+
 @property (strong, nonatomic) NSString *token;
 @property (strong, nonatomic) NSString *user_phone;
 @property (strong, nonatomic) NSArray *manufactorArr;

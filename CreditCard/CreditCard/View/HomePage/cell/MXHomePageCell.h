@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 
 @property (nonatomic, strong) CreditCard *model;
+@property (strong, nonatomic) NSArray *bankArr;
 
 @end
 

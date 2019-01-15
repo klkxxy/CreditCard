@@ -27,6 +27,7 @@
 #import "MXAccount.h"
 #import "LSActionSheet.h"
 #import "LNMethod.h"
+#import "MXBankDataTool.h"
 
 //三方库
 #import <QiniuSDK.h>

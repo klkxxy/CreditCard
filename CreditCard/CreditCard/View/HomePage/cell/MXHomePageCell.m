@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *card_num;
 @property (weak, nonatomic) IBOutlet UILabel *account_date_count;
 @property (weak, nonatomic) IBOutlet UILabel *account_date;
+@property (weak, nonatomic) IBOutlet UIImageView *logo;
 
 
 @end
@@ -27,6 +28,20 @@
     self.bank_name.text = model.bank_name;
     self.card_num.text = model.card_num;
     self.account_date.text = model.account_date;
+    
+    NSLog(@"%@",@"2018-9-20".getThisDateMonthWithDate);
+    
+    for (NSDictionary *dic in self.bankArr) {
+        NSString *b_name = dic[@"bank_name"];
+        if ([b_name isEqualToString:model.bank_name]) {
+            
+            NSString *b_logo = [dic[@"logo"] componentsSeparatedByString:@"-"][0];
+            NSString *logo = [NSString stringWithFormat:@"bank_icon_%@",b_logo];
+            self.logo.image = [UIImage imageNamed:logo];
+            break;
+        }
+    }
+    
     
 }
 

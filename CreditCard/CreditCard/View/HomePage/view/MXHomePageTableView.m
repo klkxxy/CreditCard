@@ -17,6 +17,7 @@
 @property (nonatomic ,strong) UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *paramsArr;
 @property (nonatomic, strong) RLMResults * tempArray;
+@property (strong, nonatomic) NSArray *bankArr;
 @end
 
 @implementation MXHomePageTableView
@@ -67,6 +68,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MXHomePageCell *cell = [MXHomePageCell cellWithTableView:tableView];
+    cell.bankArr = self.bankArr;
     CreditCard *model = self.tempArray[indexPath.row];
     cell.model = model;
     NSLog(@"%@",self.tempArray[indexPath.row]);
@@ -97,6 +99,13 @@
         [self.tableView reloadData];
     }
     return _tempArray;
+}
+
+-(NSArray *)bankArr{
+    if (!_bankArr) {
+        _bankArr = [MXBankDataTool BankData];
+    }
+    return _bankArr;
 }
 
 @end

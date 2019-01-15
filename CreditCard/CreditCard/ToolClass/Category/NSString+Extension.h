@@ -162,5 +162,11 @@
 + (BOOL)isEmpty:(NSString *)str;
 //我的name 和金额
 + (NSAttributedString *)LilacToolCallThodsName:(NSString *)name  OtherString:(NSString *)other;
+
+
+
+
+
+
 @end
 
