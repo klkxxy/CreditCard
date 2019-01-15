@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FB7D97DBC4F1123EB48217D4C255EDFA"
-               BlueprintName = "Pods-CatchBear"
+               BlueprintIdentifier = "92CC0AF97579EA587E1CC8FBB6BB077C"
+               BlueprintName = "Pods-CreditCard"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-CatchBear.a">
+               BuildableName = "libPods-CreditCard.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

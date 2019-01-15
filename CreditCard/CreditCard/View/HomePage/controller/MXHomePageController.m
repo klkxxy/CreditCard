@@ -11,7 +11,6 @@
 #import "MXHomePageTableView.h"
 
 
-
 @interface MXHomePageController ()
 @property(strong,nonatomic)MXHomePageTableView *tableview;
 @end
@@ -28,7 +27,10 @@
 //    // 默认配置
 //
 //    // 获取 Realm 文件的父目录
-//    NSString *folderPath = realm.configuration.fileURL.URLByDeletingLastPathComponent.path;
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    NSString *folderPath = realm.configuration.fileURL.URLByDeletingLastPathComponent.path;
+    NSLog(@"%@",folderPath);
+    
 //    // 禁用此目录的文件保护
 //
 //    CreditCard *card = [[CreditCard alloc] init];

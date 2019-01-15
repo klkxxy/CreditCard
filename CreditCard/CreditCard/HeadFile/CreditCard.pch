@@ -34,6 +34,7 @@
 #import <MJRefresh.h>
 #import "SVProgressHUD.h"
 #import "MJExtension.h"
+#import <Realm/Realm.h>
 
 #import "MXPublicRequstClass.h"
 

@@ -104,6 +104,7 @@
 		BBEA7A42216B68160055C925 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA7A41216B68160055C925 /* main.m */; };
 		BBEA7A4C216B68160055C925 /* CreditCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA7A4B216B68160055C925 /* CreditCardTests.m */; };
 		BBEA7A57216B68160055C925 /* CreditCardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA7A56216B68160055C925 /* CreditCardUITests.m */; };
+		C8B1A02BB7DD9B1F83DCADF4 /* libPods-CreditCard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8784BBC683CABF89B686200 /* libPods-CreditCard.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,14 +113,14 @@
 			containerPortal = BBEA7A27216B68160055C925 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BBEA7A2E216B68160055C925;
-			remoteInfo = CatchBear;
+			remoteInfo = CreditCard;
 		};
 		BBEA7A53216B68160055C925 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BBEA7A27216B68160055C925 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BBEA7A2E216B68160055C925;
-			remoteInfo = CatchBear;
+			remoteInfo = CreditCard;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -138,8 +139,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		058E66F667A9447C29AD95D8 /* Pods-CatchBear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchBear.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatchBear/Pods-CatchBear.release.xcconfig"; sourceTree = "<group>"; };
-		BAFA315D88D3789C445BE56F /* Pods-CatchBear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchBear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatchBear/Pods-CatchBear.debug.xcconfig"; sourceTree = "<group>"; };
+		058E66F667A9447C29AD95D8 /* Pods-CreditCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCard.release.xcconfig"; path = "Pods/Target Support Files/Pods-CreditCard/Pods-CreditCard.release.xcconfig"; sourceTree = "<group>"; };
+		BAFA315D88D3789C445BE56F /* Pods-CreditCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CreditCard/Pods-CreditCard.debug.xcconfig"; sourceTree = "<group>"; };
 		BB0F247221C7BEB400676C6D /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		BB0F247821C7BEFD00676C6D /* XWPublishBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWPublishBaseController.m; sourceTree = "<group>"; };
 		BB0F247921C7BEFD00676C6D /* XWPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWPhotoCell.h; sourceTree = "<group>"; };
@@ -309,6 +310,7 @@
 		BBEA7A52216B68160055C925 /* CreditCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreditCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEA7A56216B68160055C925 /* CreditCardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditCardUITests.m; sourceTree = "<group>"; };
 		BBEA7A58216B68160055C925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8784BBC683CABF89B686200 /* libPods-CreditCard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CreditCard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +321,7 @@
 				BBB126E921EB687200C48229 /* Realm.framework in Frameworks */,
 				BBB126D621EA032600C48229 /* libsqlite3.tbd in Frameworks */,
 				BB0F24E121C7C62C00676C6D /* Photos.framework in Frameworks */,
+				C8B1A02BB7DD9B1F83DCADF4 /* libPods-CreditCard.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,8 +345,8 @@
 		169382317384A6269E2935BD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BAFA315D88D3789C445BE56F /* Pods-CatchBear.debug.xcconfig */,
-				058E66F667A9447C29AD95D8 /* Pods-CatchBear.release.xcconfig */,
+				BAFA315D88D3789C445BE56F /* Pods-CreditCard.debug.xcconfig */,
+				058E66F667A9447C29AD95D8 /* Pods-CreditCard.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -984,6 +987,7 @@
 			children = (
 				BBB126D521EA032600C48229 /* libsqlite3.tbd */,
 				BB0F247221C7BEB400676C6D /* Photos.framework */,
+				D8784BBC683CABF89B686200 /* libPods-CreditCard.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1007,7 +1011,7 @@
 			dependencies = (
 			);
 			name = CreditCard;
-			productName = CatchBear;
+			productName = CreditCard;
 			productReference = BBEA7A2F216B68160055C925 /* CreditCard.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -1025,7 +1029,7 @@
 				BBEA7A49216B68160055C925 /* PBXTargetDependency */,
 			);
 			name = CreditCardTests;
-			productName = CatchBearTests;
+			productName = CreditCardTests;
 			productReference = BBEA7A47216B68160055C925 /* CreditCardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -1043,7 +1047,7 @@
 				BBEA7A54216B68160055C925 /* PBXTargetDependency */,
 			);
 			name = CreditCardUITests;
-			productName = CatchBearUITests;
+			productName = CreditCardUITests;
 			productReference = BBEA7A52216B68160055C925 /* CreditCardUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
@@ -1154,7 +1158,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CatchBear/Pods-CatchBear-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-CreditCard/Pods-CreditCard-resources.sh",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
@@ -1183,7 +1187,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatchBear/Pods-CatchBear-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CreditCard/Pods-CreditCard-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		253B23112947124C82A702B3 /* [CP] Check Pods Manifest.lock */ = {
@@ -1197,7 +1201,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CatchBear-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CreditCard-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1423,7 +1427,7 @@
 		};
 		BBEA7A5C216B68160055C925 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAFA315D88D3789C445BE56F /* Pods-CatchBear.debug.xcconfig */;
+			baseConfigurationReference = BAFA315D88D3789C445BE56F /* Pods-CreditCard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1437,7 +1441,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/CreditCard/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.catchBear.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CreditCard.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1445,7 +1449,7 @@
 		};
 		BBEA7A5D216B68160055C925 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 058E66F667A9447C29AD95D8 /* Pods-CatchBear.release.xcconfig */;
+			baseConfigurationReference = 058E66F667A9447C29AD95D8 /* Pods-CreditCard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1459,7 +1463,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/CreditCard/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.catchBear.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CreditCard.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1471,9 +1475,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UYRE2EMXD8;
-				INFOPLIST_FILE = CatchBearTests/Info.plist;
+				INFOPLIST_FILE = CreditCardTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "--.CatchBearTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "--.CreditCardTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CreditCard.app/CreditCard";
@@ -1486,9 +1490,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UYRE2EMXD8;
-				INFOPLIST_FILE = CatchBearTests/Info.plist;
+				INFOPLIST_FILE = CreditCardTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "--.CatchBearTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "--.CreditCardTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CreditCard.app/CreditCard";
@@ -1500,12 +1504,12 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UYRE2EMXD8;
-				INFOPLIST_FILE = CatchBearUITests/Info.plist;
+				INFOPLIST_FILE = CreditCardUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "--.CatchBearUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "--.CreditCardUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CatchBear;
+				TEST_TARGET_NAME = CreditCard;
 			};
 			name = Debug;
 		};
@@ -1514,12 +1518,12 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UYRE2EMXD8;
-				INFOPLIST_FILE = CatchBearUITests/Info.plist;
+				INFOPLIST_FILE = CreditCardUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "--.CatchBearUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "--.CreditCardUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CatchBear;
+				TEST_TARGET_NAME = CreditCard;
 			};
 			name = Release;
 		};
