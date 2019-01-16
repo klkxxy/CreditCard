@@ -76,7 +76,6 @@
 		BBB126EE21EB6FFB00C48229 /* CreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB126ED21EB6FFB00C48229 /* CreditCard.m */; };
 		BBB126F421ECD11700C48229 /* bank.json in Resources */ = {isa = PBXBuildFile; fileRef = BBB126F321ECD11700C48229 /* bank.json */; };
 		BBB126F721ECD3DE00C48229 /* MXBankDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB126F621ECD3DE00C48229 /* MXBankDataTool.m */; };
-		BBB126FD21ECF34100C48229 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB126FC21ECF34100C48229 /* NSDate+Extension.m */; };
 		BBC713D6216DCA2C0043E642 /* MXAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC713D5216DCA2C0043E642 /* MXAccount.m */; };
 		BBC713DF216DD8540043E642 /* MXLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC713DC216DD8540043E642 /* MXLoginView.m */; };
 		BBC713E0216DD8540043E642 /* MXLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC713DD216DD8540043E642 /* MXLoginView.xib */; };
@@ -255,8 +254,6 @@
 		BBB126F321ECD11700C48229 /* bank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bank.json; sourceTree = "<group>"; };
 		BBB126F521ECD3DE00C48229 /* MXBankDataTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXBankDataTool.h; sourceTree = "<group>"; };
 		BBB126F621ECD3DE00C48229 /* MXBankDataTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXBankDataTool.m; sourceTree = "<group>"; };
-		BBB126FB21ECF34100C48229 /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
-		BBB126FC21ECF34100C48229 /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		BBC713D4216DCA2C0043E642 /* MXAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXAccount.h; sourceTree = "<group>"; };
 		BBC713D5216DCA2C0043E642 /* MXAccount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXAccount.m; sourceTree = "<group>"; };
 		BBC713DC216DD8540043E642 /* MXLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXLoginView.m; sourceTree = "<group>"; };
@@ -664,8 +661,6 @@
 				BBD2FC902179801C004A32BB /* UIViewExt.m */,
 				BB61EBFB216FB186005EA1A4 /* NSString+Extension.h */,
 				BB61EBFC216FB186005EA1A4 /* NSString+Extension.m */,
-				BBB126FB21ECF34100C48229 /* NSDate+Extension.h */,
-				BBB126FC21ECF34100C48229 /* NSDate+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1271,7 +1266,6 @@
 				BB8B254421984881005E04AE /* MXRegUserinfoView.m in Sources */,
 				BB0F24D821C7BEFD00676C6D /* JJPhotoManeger.m in Sources */,
 				BB8B25392197EC63005E04AE /* MXRegisterView.m in Sources */,
-				BBB126FD21ECF34100C48229 /* NSDate+Extension.m in Sources */,
 				BB4581BC216B6FD800D9DCBD /* MXHttpManagerClass.m in Sources */,
 				BB0F24CC21C7BEFD00676C6D /* SDDemoItemView.m in Sources */,
 				BB61EBFD216FB186005EA1A4 /* NSString+Extension.m in Sources */,
