@@ -9,6 +9,7 @@
 #import "MXHomePageController.h"
 
 #import "MXHomePageTableView.h"
+#import "MXBankDataTool.h"
 
 
 @interface MXHomePageController ()
@@ -20,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [MXBankDataTool remainingPaymentDater];
     
     self.title = @"首页";
     [self tableview];
