@@ -37,7 +37,7 @@ static NSString *const kCellIdentifier = @"cell";
     
     if ([super initWithFrame:frame]) {
         
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = MX_MAIN_COLOR;
         self.showsHorizontalScrollIndicator = NO;
         self.showsVerticalScrollIndicator = NO;
         self.pagingEnabled = YES;
@@ -306,16 +306,26 @@ static NSString *const kCellIdentifier = @"cell";
     dateCom.month = month;
     dateCom.day = day;
     NSDictionary *dic = [MXBankDataTool getBestCard:dateCom];
-    CreditCard *bestCard = dic[@"bestCard"];
+//    CreditCard *bestCard = dic[@"bestCard"];
+    NSArray *bestCardArr = dic[@"bestCardArr"];
     NSNumber *mianxi = dic[@"mianxi"];
-    if ([bestCard.bank_name isEqualToString:@"光大银行"]) {
-        cell.lineView.backgroundColor = [UIColor redColor];
-    }else if ([bestCard.bank_name isEqualToString:@"中国银行"]){
-        cell.lineView.backgroundColor = [UIColor blueColor];
+    if (mianxi.integerValue == 0) {
+        [cell.lineView setHidden:YES];
+        [cell.bankLabel setHidden:YES];
     }else{
-        cell.lineView.backgroundColor = [UIColor yellowColor];
+        [cell.lineView setHidden:NO];
+        [cell.bankLabel setHidden:NO];
+        if (bestCardArr.count > 1) {
+            cell.lineView.backgroundColor = MX_BLACK_COLOR;
+            cell.bankLabel.text = [NSString stringWithFormat:@"%ld家%@",bestCardArr.count,mianxi];
+        }else{
+            CreditCard *bestCard = bestCardArr[0];
+            cell.lineView.backgroundColor = [MXBankDataTool getBankColor:bestCard.bank_name];
+            cell.bankLabel.text = [NSString stringWithFormat:@"%@%@",bestCard.bank_name,mianxi];
+        }
+        
     }
-    cell.bankLabel.text = [NSString stringWithFormat:@"%@-%@",bestCard.bank_name,mianxi];
+    
     return cell;
     
 }

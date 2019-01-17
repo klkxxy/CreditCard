@@ -11,6 +11,7 @@ static NSString *collectionCell = @"MXChoiceBankCell";
 #import "MXChoiceBankCollectionView.h"
 #import "MXChoiceBankCell.h"
 #import "MXAddCreditController.h"
+#import "CreditCard.h"
 
 @interface MXChoiceBankCollectionView () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -64,9 +65,33 @@ static NSString *collectionCell = @"MXChoiceBankCell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *bank_detail = self.bankArr[indexPath.row];
-    MXAddCreditController *controller = [[MXAddCreditController alloc]init];
-    controller.bank_detial = bank_detail;
-    [self.navigationController pushViewController:controller animated:YES];
+    NSString *bank_name = bank_detail[@"bank_name"];
+    if ([bank_name isEqualToString:@"花呗"]) {
+        CreditCard *model = [[CreditCard alloc]init];
+        model.bank_name = @"花呗";
+        model.account_date = 1;
+        model.repayment_date = 9;
+
+        //增加
+        RLMRealm * realm = [RLMRealm defaultRealm];
+        //    [realm beginWriteTransaction]; 这一句 写不写 我目前还没有发现区别
+        [realm transactionWithBlock:^{
+            //存储数据
+            [realm  addObject:model];
+            
+            //写入数据库
+            [realm commitWriteTransaction];
+            
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }];
+        
+    }else{
+        MXAddCreditController *controller = [[MXAddCreditController alloc]init];
+        controller.bank_detial = bank_detail;
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    
+    
 }
 
 #pragma mark - 懒加载 -

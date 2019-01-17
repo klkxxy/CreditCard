@@ -1,5 +1,17 @@
 [{
       "state": 0,
+      "logo": "huabei-2x",
+      "auto_id": 0,
+      "bank_id": 1,
+      "bank_name": "花呗",
+      "simple_name": "花呗",
+      "full_name": "花呗",
+      "is_deleted": 0,
+      "delete_time": "",
+      "order_index": 1,
+      "bank_type": 1,
+      "bank_type_name": "银行"
+      },{"state": 0,
       "logo": "zs-2x",
       "auto_id": 0,
       "bank_id": 1,

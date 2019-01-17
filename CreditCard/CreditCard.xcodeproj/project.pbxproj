@@ -35,6 +35,8 @@
 		BBB126EE21EB6FFB00C48229 /* CreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB126ED21EB6FFB00C48229 /* CreditCard.m */; };
 		BBB126F421ECD11700C48229 /* bank.json in Resources */ = {isa = PBXBuildFile; fileRef = BBB126F321ECD11700C48229 /* bank.json */; };
 		BBB126F721ECD3DE00C48229 /* MXBankDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB126F621ECD3DE00C48229 /* MXBankDataTool.m */; };
+		BBB1270021F0EACC00C48229 /* MXHomePageSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB126FF21F0EACC00C48229 /* MXHomePageSectionView.m */; };
+		BBB1270221F0EAD800C48229 /* MXHomePageSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBB1270121F0EAD800C48229 /* MXHomePageSectionView.xib */; };
 		BBC713E4216DDCC40043E642 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC713E3216DDCC40043E642 /* Colours.m */; };
 		BBC713EA216DED2D0043E642 /* LNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC713E9216DED2C0043E642 /* LNNavigationController.m */; };
 		BBD2FC4D21748A77004A32BB /* LZPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2FC4A21748A76004A32BB /* LZPickerView.m */; };
@@ -135,6 +137,9 @@
 		BBB126F321ECD11700C48229 /* bank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bank.json; sourceTree = "<group>"; };
 		BBB126F521ECD3DE00C48229 /* MXBankDataTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXBankDataTool.h; sourceTree = "<group>"; };
 		BBB126F621ECD3DE00C48229 /* MXBankDataTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXBankDataTool.m; sourceTree = "<group>"; };
+		BBB126FE21F0EACC00C48229 /* MXHomePageSectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXHomePageSectionView.h; sourceTree = "<group>"; };
+		BBB126FF21F0EACC00C48229 /* MXHomePageSectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXHomePageSectionView.m; sourceTree = "<group>"; };
+		BBB1270121F0EAD800C48229 /* MXHomePageSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXHomePageSectionView.xib; sourceTree = "<group>"; };
 		BBC713E1216DDB980043E642 /* MXColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXColor.h; sourceTree = "<group>"; };
 		BBC713E2216DDCC40043E642 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
 		BBC713E3216DDCC40043E642 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
@@ -265,6 +270,7 @@
 		BB2A6731216DF902008EA9A2 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				BB2A6738216DFCC9008EA9A2 /* cell */,
 				BB6FAEEC21E6347100F94D67 /* MXHomePageTableView.h */,
 				BB6FAEED21E6347100F94D67 /* MXHomePageTableView.m */,
 			);
@@ -280,6 +286,9 @@
 				BB6FAEEF21E637C000F94D67 /* MXHomePageFootView.h */,
 				BB6FAEF021E637C000F94D67 /* MXHomePageFootView.m */,
 				BB6FAEF221E637DE00F94D67 /* MXHomePageFootView.xib */,
+				BBB126FE21F0EACC00C48229 /* MXHomePageSectionView.h */,
+				BBB126FF21F0EACC00C48229 /* MXHomePageSectionView.m */,
+				BBB1270121F0EAD800C48229 /* MXHomePageSectionView.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -335,7 +344,6 @@
 			children = (
 				BB6FAEF421E645FD00F94D67 /* ChoiceBank */,
 				BB61EBF6216F8AE9005EA1A4 /* model */,
-				BB2A6738216DFCC9008EA9A2 /* cell */,
 				BB2A6731216DF902008EA9A2 /* view */,
 				BB2A6730216DF8F3008EA9A2 /* controller */,
 			);
@@ -366,7 +374,6 @@
 			isa = PBXGroup;
 			children = (
 				BB6FAF0421E7A64300F94D67 /* AddCredit */,
-				BB6FAEFA21E6480100F94D67 /* cell */,
 				BB6FAEF921E647FB00F94D67 /* view */,
 				BB6FAEF821E647F200F94D67 /* controller */,
 			);
@@ -385,6 +392,7 @@
 		BB6FAEF921E647FB00F94D67 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				BB6FAEFA21E6480100F94D67 /* cell */,
 				BB6FAEFC21E649C600F94D67 /* MXChoiceBankCollectionView.h */,
 				BB6FAEFD21E649C600F94D67 /* MXChoiceBankCollectionView.m */,
 			);
@@ -405,7 +413,6 @@
 			isa = PBXGroup;
 			children = (
 				BB6FAF0721E7A66000F94D67 /* view */,
-				BB6FAF0621E7A65B00F94D67 /* cell */,
 				BB6FAF0521E7A65100F94D67 /* controller */,
 			);
 			path = AddCredit;
@@ -418,13 +425,6 @@
 				BB6FAF0921E7A90F00F94D67 /* MXAddCreditController.m */,
 			);
 			path = controller;
-			sourceTree = "<group>";
-		};
-		BB6FAF0621E7A65B00F94D67 /* cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = cell;
 			sourceTree = "<group>";
 		};
 		BB6FAF0721E7A66000F94D67 /* view */ = {
@@ -647,6 +647,7 @@
 				BBD2FC4E21748A77004A32BB /* LZPickerView.xib in Resources */,
 				BBEA7A3C216B68160055C925 /* Assets.xcassets in Resources */,
 				BB6FAF0F21E7A95400F94D67 /* MXAddCreditView.xib in Resources */,
+				BBB1270221F0EAD800C48229 /* MXHomePageSectionView.xib in Resources */,
 				BB6FAEF321E637DE00F94D67 /* MXHomePageFootView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -743,6 +744,7 @@
 				BBD2FC922179801C004A32BB /* UIViewExt.m in Sources */,
 				344E715821F0427E00BE95A0 /* GFCalendarMonth.m in Sources */,
 				BBD2FC622174FC14004A32BB /* AppDelegate+AppService.m in Sources */,
+				BBB1270021F0EACC00C48229 /* MXHomePageSectionView.m in Sources */,
 				BB6FAF0A21E7A90F00F94D67 /* MXAddCreditController.m in Sources */,
 				BB6FAEF121E637C000F94D67 /* MXHomePageFootView.m in Sources */,
 				BBEA7A34216B68160055C925 /* AppDelegate.m in Sources */,

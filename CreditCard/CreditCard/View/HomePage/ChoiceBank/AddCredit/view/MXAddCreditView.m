@@ -32,7 +32,7 @@
     WLDecimalKeyboard *inputView = [[WLDecimalKeyboard alloc] init];
     self.bankCardTextF.delegate = self;
     self.bankCardTextF.backgroundColor = [UIColor whiteColor];
-    self.bankCardTextF.placeholder = @"请输入针数";
+    self.bankCardTextF.placeholder = @"请输入卡号";
     self.bankCardTextF.inputView = inputView;
     [self.bankCardTextF reloadInputViews];
 }

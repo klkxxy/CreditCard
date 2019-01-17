@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(NSDictionary *)getBestCard:(NSDateComponents *)getDateComponents;
 
-
++(UIColor *)getBankColor:(NSString *)bankName;
 @end
 
 NS_ASSUME_NONNULL_END
