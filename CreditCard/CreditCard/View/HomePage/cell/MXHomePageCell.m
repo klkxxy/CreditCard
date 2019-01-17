@@ -10,8 +10,8 @@
 @interface MXHomePageCell ()
 @property (weak, nonatomic) IBOutlet UILabel *bank_name;
 @property (weak, nonatomic) IBOutlet UILabel *card_num;
-@property (weak, nonatomic) IBOutlet UILabel *account_date_count;
-@property (weak, nonatomic) IBOutlet UILabel *account_date;
+@property (weak, nonatomic) IBOutlet UILabel *repayment_date_count;
+@property (weak, nonatomic) IBOutlet UILabel *repayment_date;
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 
 
@@ -27,10 +27,9 @@
     _model = model;
     self.bank_name.text = model.bank_name;
     self.card_num.text = model.card_num;
-    self.account_date.text = model.account_date;
-    
-    NSLog(@"%@",@"2018-9-20".getThisDateMonthWithDate);
-    
+    self.repayment_date_count.text = [NSString stringWithFormat:@"%ld",[MXBankDataTool remainingPaymentDater:model.account_date toDate:model.repayment_date]];
+    self.repayment_date.text = [MXBankDataTool getDetialRepayment_date:model.account_date toDate:model.repayment_date];
+
     for (NSDictionary *dic in self.bankArr) {
         NSString *b_name = dic[@"bank_name"];
         if ([b_name isEqualToString:model.bank_name]) {

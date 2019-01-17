@@ -669,7 +669,6 @@
 			isa = PBXGroup;
 			children = (
 				BB6FAF0421E7A64300F94D67 /* AddCredit */,
-				BB6FAEFB21E6480B00F94D67 /* model */,
 				BB6FAEFA21E6480100F94D67 /* cell */,
 				BB6FAEF921E647FB00F94D67 /* view */,
 				BB6FAEF821E647F200F94D67 /* controller */,
@@ -703,13 +702,6 @@
 				BB6FAF0121E7057000F94D67 /* MXChoiceBankCell.xib */,
 			);
 			path = cell;
-			sourceTree = "<group>";
-		};
-		BB6FAEFB21E6480B00F94D67 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 		BB6FAF0421E7A64300F94D67 /* AddCredit */ = {

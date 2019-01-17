@@ -25,7 +25,7 @@
 
 -(MXChoiceBankCollectionView *)collectionView{
     if (!_collectionView) {
-        _collectionView = [[MXChoiceBankCollectionView alloc]initWithFrame:CGRectMake(0,0, kScreenWidth, kScreenHeight-KSafeAreaBottonHeight)];
+        _collectionView = [[MXChoiceBankCollectionView alloc]initWithFrame:CGRectMake(0,0, kScreenWidth, kScreenHeight-KSafeAreaBottonHeight-KSafeAreaTopHeight)];
         _collectionView.navigationController = self.navigationController;
         [self.view addSubview:_collectionView];
     }

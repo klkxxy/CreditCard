@@ -14,10 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(NSArray *)BankData;
 
-+ (NSInteger)numberOfDaysWithFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate;
 
-+ (NSInteger)remainingPaymentDater;
++ (NSInteger)remainingPaymentDater:(NSInteger)account_date toDate:(NSInteger)repayment_date;
 
+
++(NSString *)getDetialRepayment_date:(NSInteger)account_date toDate:(NSInteger)repayment_date;
 @end
 
 NS_ASSUME_NONNULL_END

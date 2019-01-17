@@ -299,7 +299,7 @@
       "bank_type_name": "银行"
       }, {
       "state": 0,
-      "logo": "hzlh-2x",
+      "logo": "urcb-2x",
       "auto_id": 0,
       "bank_id": 65,
       "bank_name": "杭州联合银行",
@@ -325,7 +325,7 @@
       "bank_type_name": "银行"
       }, {
       "state": 0,
-      "logo": "jsbc-2x",
+      "logo": "jiangsu-2x",
       "auto_id": 0,
       "bank_id": 41,
       "bank_name": "江苏银行",

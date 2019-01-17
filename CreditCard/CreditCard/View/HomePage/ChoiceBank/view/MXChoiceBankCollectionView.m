@@ -16,6 +16,7 @@ static NSString *collectionCell = @"MXChoiceBankCell";
 
 @property (nonatomic ,strong) UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray *paramsArr;
+@property (strong, nonatomic) NSArray *bankArr;
 
 @end
 
@@ -42,10 +43,6 @@ static NSString *collectionCell = @"MXChoiceBankCell";
         UINib *nib = [UINib nibWithNibName:collectionCell bundle:nil];
         [self.collectionView registerNib:nib forCellWithReuseIdentifier:collectionCell];
         
-//        layout.minimumLineSpacing = 10;//设置每一行的间距
-//        layout.sectionInset = UIEdgeInsetsMake(10, 15, 0, 15);//item对象上下左右的距离
-//        self.collectionView.collectionViewLayout = layout;
-        
     }
     return self;
 }
@@ -55,18 +52,29 @@ static NSString *collectionCell = @"MXChoiceBankCell";
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
     MXChoiceBankCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionCell forIndexPath:indexPath];
-   
+    NSDictionary *bank_detail = self.bankArr[indexPath.row];
+    cell.bank_detial = bank_detail;
     return cell;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
 {
-    return 10;
+    return self.bankArr.count;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *bank_detail = self.bankArr[indexPath.row];
     MXAddCreditController *controller = [[MXAddCreditController alloc]init];
+    controller.bank_detial = bank_detail;
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+#pragma mark - 懒加载 -
+-(NSArray *)bankArr{
+    if (!_bankArr) {
+        _bankArr = [MXBankDataTool BankData];
+    }
+    return _bankArr;
 }
 
 @end

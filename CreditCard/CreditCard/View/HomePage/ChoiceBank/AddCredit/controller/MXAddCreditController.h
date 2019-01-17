@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MXAddCreditController : MXBaseViewController
-
+@property (strong, nonatomic) NSDictionary *bank_detial;
 @end
 
 NS_ASSUME_NONNULL_END

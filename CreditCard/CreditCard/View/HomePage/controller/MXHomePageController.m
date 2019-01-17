@@ -21,17 +21,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [MXBankDataTool remainingPaymentDater];
+    //    // 获取 Realm 文件的父目录
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    NSString *folderPath = realm.configuration.fileURL.URLByDeletingLastPathComponent.path;
+    NSLog(@"%@",folderPath);
+    
     
     self.title = @"首页";
     [self tableview];
     
 //    // 默认配置
 //
-//    // 获取 Realm 文件的父目录
-    RLMRealm *realm = [RLMRealm defaultRealm];
-    NSString *folderPath = realm.configuration.fileURL.URLByDeletingLastPathComponent.path;
-    NSLog(@"%@",folderPath);
+
     
 //    // 禁用此目录的文件保护
 //

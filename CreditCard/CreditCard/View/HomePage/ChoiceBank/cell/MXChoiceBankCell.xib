@@ -54,6 +54,10 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <size key="customSize" width="102" height="115"/>
+            <connections>
+                <outlet property="bank_logo_imgV" destination="AVU-rW-1JN" id="8cb-Jn-VA0"/>
+                <outlet property="bank_name_lbl" destination="X09-JZ-yl8" id="ozT-Mj-cPv"/>
+            </connections>
             <point key="canvasLocation" x="105.59999999999999" y="115.59220389805098"/>
         </collectionViewCell>
     </objects>

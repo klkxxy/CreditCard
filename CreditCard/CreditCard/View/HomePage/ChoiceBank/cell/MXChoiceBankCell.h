@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MXChoiceBankCell : UICollectionViewCell
-
+@property (strong, nonatomic) NSDictionary *bank_detial;
 @end
 
 NS_ASSUME_NONNULL_END

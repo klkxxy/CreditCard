@@ -42,26 +42,70 @@
     return comp.day;
 }
 
-//account_date出账日 repayment_date还款日
-+ (NSInteger)remainingPaymentDater:(NSInteger)account_date toDate:(NSInteger)repayment_date{
+//获取今天的年月日
++ (NSDateComponents *)getDateComponents{
     NSDate *date = [NSDate date];//这个是NSDate类型的日期，所要获取的年月日都放在这里；
     
     NSCalendar *cal = [NSCalendar currentCalendar];
-
+    
     unsigned int unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;//这句是说你要获取日期的元素有哪些。获取年就要写NSYearCalendarUnit，获取小时就要写NSHourCalendarUnit，中间用|隔开；
     
     NSDateComponents *d = [cal components:unitFlags fromDate:date];//把要从date中获取的unitFlags标示的日期元素存放在NSDateComponents类型的d里面；
+    return d;
+}
+
+//获取详细还款日
++(NSString *)getDetialRepayment_date:(NSInteger)account_date toDate:(NSInteger)repayment_date{
+    NSDateComponents *d = [MXBankDataTool getDateComponents];
+    //然后就可以从d中获取具体的年月日了；
+    NSInteger year = [d year];
+    NSInteger month = [d month];
+    NSInteger day = [d day];
+    
+    if (day < account_date) {
+        //还没到出账日，免息期=当前日到下一个账单月
+        if (day < repayment_date) {
+            return [NSString stringWithFormat:@"%ld-%ld",month,repayment_date];
+        }else{
+            //当前月有多少天
+            if (month + 1 == 13) {
+                return [NSString stringWithFormat:@"1-%ld",repayment_date];
+            }else{
+                return [NSString stringWithFormat:@"%ld-%ld",month+1,repayment_date];
+            }
+        }
+    }else{
+        //已经过了本月的出账日，免息期等于当前日到下下个账单月
+        if (day < repayment_date) {
+            //当前月有多少天
+            if (month + 1 == 13) {
+                return [NSString stringWithFormat:@"%ld-1-%ld",year+1,repayment_date];
+            }else{
+                return [NSString stringWithFormat:@"%ld-%ld",month+1,repayment_date];
+            }
+        }else{
+            if (month == 11) {
+                return [NSString stringWithFormat:@"%ld-1-%ld",year+1,repayment_date];
+            }else if (month == 12){
+                return [NSString stringWithFormat:@"%ld-2-%ld",year+1,repayment_date];
+            }else{
+                return [NSString stringWithFormat:@"%ld-%ld",month+2,repayment_date];
+            }
+        }
+        
+    }
+    
+}
+
+//account_date出账日 repayment_date还款日
++ (NSInteger)remainingPaymentDater:(NSInteger)account_date toDate:(NSInteger)repayment_date{
+    NSDateComponents *d = [MXBankDataTool getDateComponents];
     
     //然后就可以从d中获取具体的年月日了；
     NSInteger year = [d year];
     NSInteger month = [d month];
     NSInteger day = [d day];
 
-    NSLog(@"%ld",year);
-    NSLog(@"%ld",month);
-    NSLog(@"%ld",day);
-    
-    
     if (day < account_date) {
         //还没到出账日，免息期=当前日到下一个账单月
         if (day < repayment_date) {

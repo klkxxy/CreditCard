@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MXAddCreditView : UIView
 + (instancetype)initMXAddCreditView;
+@property (strong, nonatomic) NSDictionary *bank_detial;
 @end
 
 NS_ASSUME_NONNULL_END

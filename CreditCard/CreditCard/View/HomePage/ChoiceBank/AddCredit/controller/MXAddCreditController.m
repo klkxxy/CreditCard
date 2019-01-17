@@ -26,6 +26,7 @@
     if (!_addCreditView) {
         
         MXAddCreditView *view = [MXAddCreditView initMXAddCreditView];
+        view.bank_detial = self.bank_detial;
         view.frame = CGRectMake(0,0, kScreenWidth, kScreenHeight-KSafeAreaBottonHeight);
         _addCreditView = view;
         

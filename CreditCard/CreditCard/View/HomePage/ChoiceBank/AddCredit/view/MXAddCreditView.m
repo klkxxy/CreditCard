@@ -8,11 +8,26 @@
 
 #import "MXAddCreditView.h"
 
+@interface MXAddCreditView ()
+@property (weak, nonatomic) IBOutlet UIImageView *bank_logo_imgV;
+@property (weak, nonatomic) IBOutlet UILabel *bank_name_lbl;
+
+
+@end
 @implementation MXAddCreditView
+
+- (void)setBank_detial:(NSDictionary *)bank_detial{
+    _bank_detial = bank_detial;
+    NSString *b_logo = [bank_detial[@"logo"] componentsSeparatedByString:@"-"][0];
+    NSString *logo = [NSString stringWithFormat:@"bank_icon_%@",b_logo];
+    self.bank_logo_imgV.image = [UIImage imageNamed:logo];
+    self.bank_name_lbl.text = bank_detial[@"bank_name"];
+}
 
 + (instancetype)initMXAddCreditView {
     return NSbunleloadNibName(@"MXAddCreditView");
 }
+
 
 
 @end
