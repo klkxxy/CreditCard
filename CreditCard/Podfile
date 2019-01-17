@@ -1,16 +1,9 @@
 platform:ios, '8.0'
 
 target 'CreditCard' do
-pod 'SDWebImage', '>= 4.0.0'
 pod 'SVProgressHUD', '>= 2.1.2'
-pod 'MJRefresh'
-pod 'IQKeyboardManager'
 pod 'MJExtension'
-pod 'ZLPhotoBrowser' #图片选择，放大
-pod 'PPNetworkHelper',:git => 'https://github.com/jkpang/PPNetworkHelper.git'
-
-pod "Qiniu", "~> 7.1"
-
+pod 'IQKeyboardManager'
 end
 
 

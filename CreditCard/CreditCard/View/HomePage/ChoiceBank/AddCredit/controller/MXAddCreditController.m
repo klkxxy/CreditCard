@@ -28,6 +28,7 @@
         MXAddCreditView *view = [MXAddCreditView initMXAddCreditView];
         view.bank_detial = self.bank_detial;
         view.frame = CGRectMake(0,0, kScreenWidth, kScreenHeight-KSafeAreaBottonHeight);
+        view.navigationController = self.navigationController;
         _addCreditView = view;
         
         [self.view addSubview:_addCreditView];

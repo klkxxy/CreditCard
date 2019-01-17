@@ -9,33 +9,22 @@
 #ifndef CreditCard_pch
 #define CreditCard_pch
 
-#import "Interface.h"
 #import "CreditCard.h"
 #import "Singleton.h"
 #import "MXColor.h"
-#import "MXUserMessageTool.h"
-#import "MXUserMessage.h"
 #import "Colours.h"
-#import "MXHttpManagerClass.h"
 
 //类
 #import "NSString+Extension.h"
-#import "UIImageView+WebCache.h"
-#import <SDWebImage/UIButton+WebCache.h>
 #import "UIViewExt.h"
 
-#import "MXAccount.h"
 #import "LSActionSheet.h"
 #import "LNMethod.h"
 #import "MXBankDataTool.h"
 
 //三方库
-#import <QiniuSDK.h>
-#import <MJRefresh.h>
 #import "SVProgressHUD.h"
 #import "MJExtension.h"
 #import <Realm/Realm.h>
-
-#import "MXPublicRequstClass.h"
 
 #endif /* CreditCard_pch */

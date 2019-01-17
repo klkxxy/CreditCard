@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MXHomePageTableView : UIView
 @property (nonatomic , weak) UINavigationController *navigationController;
+-(void)reloadData;
 @end
 
 NS_ASSUME_NONNULL_END

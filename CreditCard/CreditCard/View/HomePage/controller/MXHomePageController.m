@@ -10,7 +10,7 @@
 
 #import "MXHomePageTableView.h"
 #import "MXBankDataTool.h"
-
+#import "CreditCard.h"
 
 @interface MXHomePageController ()
 @property(strong,nonatomic)MXHomePageTableView *tableview;
@@ -30,36 +30,13 @@
     self.title = @"首页";
     [self tableview];
     
-//    // 默认配置
-//
-
-    
-//    // 禁用此目录的文件保护
-//
-//    CreditCard *card = [[CreditCard alloc] init];
-//    card.bank_name = @"中国银行";
-//    card.card_num = @"123123123";
-//    card.account_date = @"1";
-//    card.repayment_date = @"10";
-//
-//    RLMRealm *realm = [RLMRealm defaultRealm];
-//    [realm transactionWithBlock:^{
-//
-//        //存储数据
-//        [realm  addObject:card];
-//
-//        //写入数据库
-//        [realm commitWriteTransaction];
-//
-//    }];
-    
-    
-    
-    
+    [self getBestCard:[MXBankDataTool getDateComponents]];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    [self.tableview reloadData];
 
 }
 
@@ -73,6 +50,35 @@
     
     return _tableview;
 }
+
+//获取最好的卡
+-(NSDictionary *)getBestCard:(NSDateComponents *)getDateComponents{
+    RLMResults *tempArray = [CreditCard allObjectsInRealm:[RLMRealm defaultRealm]];
+    
+    NSInteger mianxi = 0;
+    CreditCard *bestCard;
+    for (CreditCard *model in tempArray) {
+        
+        NSInteger m = [MXBankDataTool remainingPaymentDater:model.account_date toDate:model.repayment_date dateComponent:getDateComponents];
+        if (m > mianxi) {
+            mianxi = m;
+            bestCard = model;
+        }
+    }
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:mianxi],@"mainxi",bestCard,@"bestCard", nil];
+
+    return dic;
+    
+}
+
+
+
+
+
+
+
+
+
 
 
 @end

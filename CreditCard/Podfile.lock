@@ -1,85 +1,24 @@
 PODS:
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
-    - AFNetworking/NSURLSession
-  - GPUImage (0.1.7)
-  - HappyDNS (0.3.14)
-  - IQKeyboardManager (6.0.3)
-  - MJExtension (3.0.15)
-  - MJRefresh (3.1.15.3)
-  - PPNetworkHelper (0.8.1):
-    - AFNetworking (~> 3.2.0)
-    - YYCache (~> 1.0.4)
-  - Qiniu (7.2.4):
-    - HappyDNS (~> 0.3)
-  - SDWebImage (4.4.0):
-    - SDWebImage/Core (= 4.4.0)
-  - SDWebImage/Core (4.4.0)
+  - IQKeyboardManager (6.2.0)
+  - MJExtension (3.0.15.1)
   - SVProgressHUD (2.2.5)
-  - YYCache (1.0.4)
-  - ZLPhotoBrowser (2.7.0):
-    - GPUImage
-    - SDWebImage
 
 DEPENDENCIES:
   - IQKeyboardManager
   - MJExtension
-  - MJRefresh
-  - PPNetworkHelper (from `https://github.com/jkpang/PPNetworkHelper.git`)
-  - Qiniu (~> 7.1)
-  - SDWebImage (>= 4.0.0)
   - SVProgressHUD (>= 2.1.2)
-  - ZLPhotoBrowser
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - AFNetworking
-    - GPUImage
-    - HappyDNS
     - IQKeyboardManager
     - MJExtension
-    - MJRefresh
-    - Qiniu
-    - SDWebImage
     - SVProgressHUD
-    - YYCache
-    - ZLPhotoBrowser
-
-EXTERNAL SOURCES:
-  PPNetworkHelper:
-    :git: https://github.com/jkpang/PPNetworkHelper.git
-
-CHECKOUT OPTIONS:
-  PPNetworkHelper:
-    :commit: 54505979e1522fed07cc0a4ecba057010b0d8c6b
-    :git: https://github.com/jkpang/PPNetworkHelper.git
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
-  HappyDNS: dc6a164ee81979093123c241c6353bcf0218add6
-  IQKeyboardManager: c390e612f4b98c8fd748016470138537dc163ead
-  MJExtension: 3f039575db1b135a20699ad298713b26acec1528
-  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
-  PPNetworkHelper: e893191a73665e9c496c2887fd5ceece9e930bb8
-  Qiniu: 65384bca1cdb0480a68d9b9b8f54db53418c0355
-  SDWebImage: b534502786e43dde36dfcaee89356fe6df30e203
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
-  ZLPhotoBrowser: d3858f235a57b4d5c6e51f27af5f352d223d926b
 
-PODFILE CHECKSUM: 69810a974947774dfd0398058bde3bcc5832813a
+PODFILE CHECKSUM: 1c4e514c8e99e26f78caf6ec5f04c7448b2f0189
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2

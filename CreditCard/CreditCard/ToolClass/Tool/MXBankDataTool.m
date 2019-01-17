@@ -7,6 +7,7 @@
 //
 
 #import "MXBankDataTool.h"
+#import "CreditCard.h"
 
 @implementation MXBankDataTool
 
@@ -23,25 +24,6 @@
     return functionArr;
 }
 
-/**
- * @method
- *
- * @brief 获取两个日期之间的天数
- * @param fromDate       起始日期
- * @param toDate         终止日期
- * @return    总天数
- */
-+ (NSInteger)numberOfDaysWithFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate{
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    
-    NSDateComponents    * comp = [calendar components:NSCalendarUnitDay
-                                             fromDate:fromDate
-                                               toDate:toDate
-                                              options:NSCalendarWrapComponents];
-    NSLog(@" -- >>  comp : %@  << --",comp);
-    return comp.day;
-}
-
 //获取今天的年月日
 + (NSDateComponents *)getDateComponents{
     NSDate *date = [NSDate date];//这个是NSDate类型的日期，所要获取的年月日都放在这里；
@@ -54,9 +36,9 @@
     return d;
 }
 
-//获取详细还款日
-+(NSString *)getDetialRepayment_date:(NSInteger)account_date toDate:(NSInteger)repayment_date{
-    NSDateComponents *d = [MXBankDataTool getDateComponents];
+//获取免息日剩余天数
++(NSString *)getDetialRepayment_date:(NSInteger)account_date toDate:(NSInteger)repayment_date dateComponent:(NSDateComponents *)getDateComponents{
+    NSDateComponents *d = getDateComponents;
     //然后就可以从d中获取具体的年月日了；
     NSInteger year = [d year];
     NSInteger month = [d month];
@@ -98,8 +80,8 @@
 }
 
 //account_date出账日 repayment_date还款日
-+ (NSInteger)remainingPaymentDater:(NSInteger)account_date toDate:(NSInteger)repayment_date{
-    NSDateComponents *d = [MXBankDataTool getDateComponents];
++ (NSInteger)remainingPaymentDater:(NSInteger)account_date toDate:(NSInteger)repayment_date dateComponent:(NSDateComponents *)getDateComponents{
+    NSDateComponents *d = getDateComponents;
     
     //然后就可以从d中获取具体的年月日了；
     NSInteger year = [d year];
@@ -138,6 +120,32 @@
     }
     return 0;
 }
+
+//获取最好的卡
++(NSDictionary *)getBestCard:(NSDateComponents *)getDateComponents{
+     RLMResults *tempArray = [CreditCard allObjectsInRealm:[RLMRealm defaultRealm]];
+    
+    NSInteger mianxi = 0;
+    CreditCard *bestCard;
+    for (CreditCard *model in tempArray) {
+        
+        NSInteger m = [MXBankDataTool remainingPaymentDater:model.account_date toDate:model.repayment_date dateComponent:getDateComponents];
+        if (m > mianxi) {
+            mianxi = m;
+            bestCard = model;
+        }
+    }
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:mianxi],@"mianxi",bestCard,@"bestCard", nil];
+    
+    return dic;
+    
+}
+
+
+
+
+
+
 
 +(NSInteger)dayOfMonth:(NSInteger)month andYear:(NSInteger)year{
     switch (month) {

@@ -27,8 +27,9 @@
     _model = model;
     self.bank_name.text = model.bank_name;
     self.card_num.text = model.card_num;
-    self.repayment_date_count.text = [NSString stringWithFormat:@"%ld",[MXBankDataTool remainingPaymentDater:model.account_date toDate:model.repayment_date]];
-    self.repayment_date.text = [MXBankDataTool getDetialRepayment_date:model.account_date toDate:model.repayment_date];
+    self.repayment_date_count.text = [NSString stringWithFormat:@"%ld",[MXBankDataTool remainingPaymentDater:model.account_date toDate:model.repayment_date dateComponent:[MXBankDataTool getDateComponents]]];
+    
+    self.repayment_date.text = [MXBankDataTool getDetialRepayment_date:model.account_date toDate:model.repayment_date dateComponent:[MXBankDataTool getDateComponents]];
 
     for (NSDictionary *dic in self.bankArr) {
         NSString *b_name = dic[@"bank_name"];

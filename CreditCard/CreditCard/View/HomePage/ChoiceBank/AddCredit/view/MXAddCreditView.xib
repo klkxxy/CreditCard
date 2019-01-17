@@ -107,7 +107,7 @@
                                 <constraint firstAttribute="height" constant="1" id="gXZ-OI-XL4"/>
                             </constraints>
                         </view>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入完整卡号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FFE-gq-QVo">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入银行卡号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FFE-gq-QVo">
                             <rect key="frame" x="102" y="18.5" width="243" height="17"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -146,11 +146,11 @@
                             <color key="textColor" red="0.81168681379999996" green="0.81182092429999997" blue="0.81165826320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="va5-yu-ERg">
-                            <rect key="frame" x="345" y="18" width="14" height="18"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="我的相册返回icon" translatesAutoresizingMaskIntoConstraints="NO" id="va5-yu-ERg">
+                            <rect key="frame" x="324" y="9.5" width="35" height="35"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="14" id="LW9-Ju-IB4"/>
-                                <constraint firstAttribute="height" constant="18" id="tG9-Zh-zR0"/>
+                                <constraint firstAttribute="width" constant="35" id="LW9-Ju-IB4"/>
+                                <constraint firstAttribute="height" constant="35" id="tG9-Zh-zR0"/>
                             </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0T-34-cCP">
@@ -162,6 +162,9 @@
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="120-eO-IKx">
                             <rect key="frame" x="102" y="0.0" width="273" height="54"/>
+                            <connections>
+                                <action selector="accout_date_selectClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="5qr-0w-1Nz"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -199,11 +202,11 @@
                             <color key="textColor" red="0.81168681379999996" green="0.81182092429999997" blue="0.81165826320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rtb-yk-fWk">
-                            <rect key="frame" x="345" y="18" width="14" height="18"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="我的相册返回icon" translatesAutoresizingMaskIntoConstraints="NO" id="Rtb-yk-fWk">
+                            <rect key="frame" x="324" y="9.5" width="35" height="35"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="14" id="Jd9-Xu-55q"/>
-                                <constraint firstAttribute="height" constant="18" id="m4P-J9-llm"/>
+                                <constraint firstAttribute="width" constant="35" id="Jd9-Xu-55q"/>
+                                <constraint firstAttribute="height" constant="35" id="m4P-J9-llm"/>
                             </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSG-6F-ZuC">
@@ -215,6 +218,9 @@
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHN-dK-mdP">
                             <rect key="frame" x="102" y="0.0" width="273" height="54"/>
+                            <connections>
+                                <action selector="repayment_date_selectClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="s7o-Rt-w1S"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -236,21 +242,33 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAU-s5-hHq">
                     <rect key="frame" x="15" y="323" width="345" height="44"/>
-                    <color key="backgroundColor" red="0.99215686274509807" green="0.8901960784313725" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.99215686274509807" green="0.8901960784313725" blue="0.32240987540849669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="aML-aQ-kR4"/>
                     </constraints>
                     <state key="normal" title="保存">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="addCreditClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="y5i-W2-qWb"/>
+                    </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="温馨提示：很多操作都是根据卡号操作，请勿重复填写相同卡号" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-ug-rnm">
+                    <rect key="frame" x="15" y="375" width="345" height="13.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Afc-ug-rnm" firstAttribute="trailing" secondItem="TAU-s5-hHq" secondAttribute="trailing" id="3Gg-9S-cc9"/>
                 <constraint firstItem="xpH-ZW-yDM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3Hk-m4-HLI"/>
                 <constraint firstItem="y2c-zp-U0D" firstAttribute="top" secondItem="xpH-ZW-yDM" secondAttribute="bottom" id="3wT-PL-nGT"/>
                 <constraint firstItem="Wgi-5r-xoB" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="4MS-45-TVc"/>
                 <constraint firstItem="cG5-9P-wBL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="617-HH-J4h"/>
+                <constraint firstItem="Afc-ug-rnm" firstAttribute="top" secondItem="TAU-s5-hHq" secondAttribute="bottom" constant="8" id="9Oo-Vx-Zx6"/>
+                <constraint firstItem="Afc-ug-rnm" firstAttribute="leading" secondItem="TAU-s5-hHq" secondAttribute="leading" id="DjL-uP-vRT"/>
                 <constraint firstItem="y2c-zp-U0D" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="EWC-x9-nri"/>
                 <constraint firstItem="UhP-BD-i1Q" firstAttribute="top" secondItem="y2c-zp-U0D" secondAttribute="bottom" id="LfO-RA-UoV"/>
                 <constraint firstItem="y2c-zp-U0D" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Qyz-3a-Lrz"/>
@@ -269,10 +287,16 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="account_date_lbl" destination="622-fX-0Ex" id="pof-nF-gZd"/>
+                <outlet property="bankCardTextF" destination="FFE-gq-QVo" id="Vue-n7-Rwz"/>
                 <outlet property="bank_logo_imgV" destination="7Q8-QR-HT3" id="uLY-P0-DvE"/>
                 <outlet property="bank_name_lbl" destination="dh7-gN-jMk" id="ay9-ET-xqO"/>
+                <outlet property="repayment_date_lbl" destination="6md-eg-aQi" id="h5c-Z6-5p2"/>
             </connections>
             <point key="canvasLocation" x="92" y="-266.71664167916043"/>
         </view>
     </objects>
+    <resources>
+        <image name="我的相册返回icon" width="35" height="35"/>
+    </resources>
 </document>

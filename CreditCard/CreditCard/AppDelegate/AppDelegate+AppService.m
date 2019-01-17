@@ -9,12 +9,8 @@
 #import "AppDelegate+AppService.h"
 
 #import "IQKeyboardManager.h"
-#import "MXMainController.h"
-#import "MXAuthController.h"
-
-#import "MXAuthController.h"
-
 #import "LNNavigationController.h"
+#import "MXHomePageController.h"
 
 @implementation AppDelegate (AppService)
 
@@ -31,8 +27,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    MXMainController * mainTab = [[MXMainController alloc] initWithNibName:nil bundle:nil];
-    [UIApplication sharedApplication].keyWindow.rootViewController = mainTab;
+    MXHomePageController * mainTab = [[MXHomePageController alloc] initWithNibName:nil bundle:nil];
+    LNNavigationController *nav = [[LNNavigationController alloc] initWithRootViewController:mainTab];
+    [UIApplication sharedApplication].keyWindow.rootViewController = nav;
 
 }
 

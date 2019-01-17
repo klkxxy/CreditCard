@@ -15,10 +15,16 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSArray *)BankData;
 
 
-+ (NSInteger)remainingPaymentDater:(NSInteger)account_date toDate:(NSInteger)repayment_date;
++ (NSInteger)remainingPaymentDater:(NSInteger)account_date toDate:(NSInteger)repayment_date dateComponent:(NSDateComponents *)getDateComponents;
 
 
-+(NSString *)getDetialRepayment_date:(NSInteger)account_date toDate:(NSInteger)repayment_date;
++(NSString *)getDetialRepayment_date:(NSInteger)account_date toDate:(NSInteger)repayment_date dateComponent:(NSDateComponents *)getDateComponents;
+
++ (NSDateComponents *)getDateComponents;
+
++(NSDictionary *)getBestCard:(NSDateComponents *)getDateComponents;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

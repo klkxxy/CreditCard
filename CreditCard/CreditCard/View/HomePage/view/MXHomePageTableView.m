@@ -11,6 +11,7 @@
 #import "MXHomePageFootView.h"
 #import "MXChoiceBankController.h"
 #import "CreditCard.h"
+#import "GFCalendar.h"
 
 @interface MXHomePageTableView () <UITableViewDelegate,UITableViewDataSource>
 
@@ -33,9 +34,18 @@
         self.tableView.backgroundColor = MX_GRAY_COLOR;
         self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
         
-//        LNMyHeaderView *headerView = [LNMyHeaderView initLNMyHeaderView];
-//        headerView.frame = CGRectMake(0,0, kScreenWidth, 240.f);
-//        self.tableView.tableHeaderView = headerView;
+        CGFloat width = self.bounds.size.width - 20.0;
+        CGPoint origin = CGPointMake(10, 0);
+        GFCalendarView *calendar = [[GFCalendarView alloc] initWithFrameOrigin:origin width:width];
+        
+        // 点击某一天的回调
+        calendar.didSelectDayHandler = ^(NSInteger year, NSInteger month, NSInteger day) {
+          
+            
+        };
+        UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, calendar.height)];
+        [headerView addSubview:calendar];
+        self.tableView.tableHeaderView = headerView;
         
         MXHomePageFootView *footView = [MXHomePageFootView initMXHomePageFootView];
         footView.frame = CGRectMake(0, 0, kScreenWidth, 150.f);
@@ -73,8 +83,25 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    [self.navigationController pushViewController:[MXChoiceBankController new] animated:true];
+
+    [LSActionSheet showWithTitle:@"请选择" destructiveTitle:nil otherTitles:@[@"删除信用卡"] block:^(int index) {
+        
+        if (index == 0) {
+            RLMRealm * realm = [RLMRealm defaultRealm];
+            [realm beginWriteTransaction];
+            [realm deleteObject:self.tempArray[indexPath.row]];
+            [realm commitWriteTransaction];
+            [self reloadData];
+        }else {
+            
+        }
+        
+    }];
+}
+
+-(void)reloadData{
+    _tempArray = [CreditCard allObjectsInRealm:[RLMRealm defaultRealm]];
+    [self.tableView reloadData];
 }
 
 #pragma mark - 懒加载 -
@@ -87,8 +114,7 @@
 
 -(RLMResults *) tempArray{
     if (!_tempArray) {
-        _tempArray = [CreditCard allObjectsInRealm:[RLMRealm defaultRealm]];
-        [self.tableView reloadData];
+        [self reloadData];
     }
     return _tempArray;
 }
