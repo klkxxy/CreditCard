@@ -174,7 +174,6 @@ static NSString *const kCellIdentifier = @"cell";
         GFCalendarMonth *monthInfo = self.monthArray[0];
         NSInteger firstWeekday = monthInfo.firstWeekday;
         NSInteger totalDays = monthInfo.totalDays;
-        NSLog(@"%d",totalDays);
         
         // 当前月
         if (indexPath.row >= firstWeekday && indexPath.row < firstWeekday + totalDays) {
@@ -299,8 +298,7 @@ static NSString *const kCellIdentifier = @"cell";
     NSInteger year = [currentDate dateYear];
     NSInteger month = [currentDate dateMonth];
     NSInteger day = [cell.todayLabel.text integerValue];
-    
-    NSLog(@"%ld-%ld-%ld",year,month,day);
+
     NSDateComponents *dateCom = [[NSDateComponents alloc]init];
     dateCom.year = year;
     dateCom.month = month;

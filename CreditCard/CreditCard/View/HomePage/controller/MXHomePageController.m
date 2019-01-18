@@ -7,6 +7,7 @@
 //
 
 #import "MXHomePageController.h"
+#import "MXTimingPushViewController.h"
 
 #import "MXHomePageTableView.h"
 #import "MXBankDataTool.h"
@@ -28,10 +29,16 @@
     
     
     self.title = @"首页";
-    [self tableview];
     
-    [self getBestCard:[MXBankDataTool getDateComponents]];
+    [self barButtonItemName:nil withImageName:@"remind" targer:@"timingPushViewClick" isRight:YES];
+    
 }
+
+-(void)timingPushViewClick{
+    MXTimingPushViewController *controller = [[MXTimingPushViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -50,27 +57,6 @@
     
     return _tableview;
 }
-
-//获取最好的卡
--(NSDictionary *)getBestCard:(NSDateComponents *)getDateComponents{
-    RLMResults *tempArray = [CreditCard allObjectsInRealm:[RLMRealm defaultRealm]];
-    
-    NSInteger mianxi = 0;
-    CreditCard *bestCard;
-    for (CreditCard *model in tempArray) {
-        
-        NSInteger m = [MXBankDataTool remainingPaymentDater:model.account_date toDate:model.repayment_date dateComponent:getDateComponents];
-        if (m > mianxi) {
-            mianxi = m;
-            bestCard = model;
-        }
-    }
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:mianxi],@"mainxi",bestCard,@"bestCard", nil];
-
-    return dic;
-    
-}
-
 
 
 

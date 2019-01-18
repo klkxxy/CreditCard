@@ -33,6 +33,11 @@
 	<string>APP需要您允许使用麦克风,才可进行语音录音操作。这些可在“设置”中配置。</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>APP需要您允许访问图片进行选择上传头像、图片等操作。这些可在“设置”中配置。</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

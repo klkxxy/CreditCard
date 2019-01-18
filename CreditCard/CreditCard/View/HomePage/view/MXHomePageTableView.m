@@ -105,7 +105,7 @@
     cell.bankArr = self.bankArr;
     CreditCard *model = self.tempArray[indexPath.row];
     cell.model = model;
-    NSLog(@"%@",self.tempArray[indexPath.row]);
+    NSLog(@"--------%@",self.tempArray[indexPath.row]);
 
     return cell;
 }

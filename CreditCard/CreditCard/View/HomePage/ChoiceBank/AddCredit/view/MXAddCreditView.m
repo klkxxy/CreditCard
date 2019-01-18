@@ -119,7 +119,6 @@
 #pragma mark - UITextFieldDelegate -
 /// 设置自定义键盘后，delegate 不会被调用？
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSLog(@"%@", [textField.text stringByReplacingCharactersInRange:range withString:string]);
     
     return YES;
 }

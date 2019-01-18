@@ -4,19 +4,24 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CreditCard/ToolClass/Lib/GFCalendar/GFCalendarScrollView.m"
-            timestampString = "569399476.86239"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "342"
-            endingLineNumber = "342"
-            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
-            landmarkType = "7">
+            symbolName = "-[NSException raise]"
+            moduleName = "">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NSException raise]"
+                  moduleName = "CoreFoundation"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,14 +30,24 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CreditCard/ToolClass/Lib/GFCalendar/GFCalendarScrollView.m"
-            timestampString = "569399554.423314"
+            filePath = "CreditCard/View/HomePage/view/MXHomePageTableView.m"
+            timestampString = "569497618.411009"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "311"
-            endingLineNumber = "311"
-            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-tableView:viewForHeaderInSection:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

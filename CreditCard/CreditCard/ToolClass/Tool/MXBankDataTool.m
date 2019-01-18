@@ -44,9 +44,8 @@
     NSInteger month = [d month];
     NSInteger day = [d day];
     
-    if (day < account_date) {
-        //还没到出账日，免息期=当前日到下一个账单月
-        if (day < repayment_date) {
+    if (account_date < repayment_date) {
+        if (day < account_date) {
             return [NSString stringWithFormat:@"%ld-%ld",month,repayment_date];
         }else{
             //当前月有多少天
@@ -57,24 +56,22 @@
             }
         }
     }else{
-        //已经过了本月的出账日，免息期等于当前日到下下个账单月
-        if (day < repayment_date) {
+        if (day < account_date) {
             //当前月有多少天
             if (month + 1 == 13) {
-                return [NSString stringWithFormat:@"%ld-1-%ld",year+1,repayment_date];
+                return [NSString stringWithFormat:@"1-%ld",repayment_date];
             }else{
                 return [NSString stringWithFormat:@"%ld-%ld",month+1,repayment_date];
             }
         }else{
-            if (month == 11) {
-                return [NSString stringWithFormat:@"%ld-1-%ld",year+1,repayment_date];
-            }else if (month == 12){
-                return [NSString stringWithFormat:@"%ld-2-%ld",year+1,repayment_date];
-            }else{
-                return [NSString stringWithFormat:@"%ld-%ld",month+2,repayment_date];
-            }
+                if (month == 11) {
+                    return [NSString stringWithFormat:@"%ld-1-%ld",year+1,repayment_date];
+                }else if (month == 12){
+                    return [NSString stringWithFormat:@"%ld-2-%ld",year+1,repayment_date];
+                }else{
+                    return [NSString stringWithFormat:@"%ld-%ld",month+2,repayment_date];
+                }
         }
-        
     }
     
 }
@@ -89,45 +86,37 @@
     NSInteger day = [d day];
 
     //免息期等于绝对免息期（即账单日和还款日之间的日期）+ 当前日期和下一个还款日之间的日期
-    
-    
-    if (day < account_date) {
-        //还没到出账日，免息期=当前日到下一个账单月
-        if (day < repayment_date) {
-            return repayment_date - day;
-        }else{
-            //当前月有多少天
-            NSInteger month_dayCount = [MXBankDataTool dayOfMonth:month andYear:year];
-            return month_dayCount - day + repayment_date;
-        }
+    NSInteger absolutely_Interestfree;
+    if (account_date < repayment_date) {
+        absolutely_Interestfree = repayment_date - account_date;
     }else{
-        //已经过了本月的出账日，免息期等于当前日到下下个账单月
-        if (day < repayment_date) {
-            //当前月有多少天
-            NSInteger month_dayCount = [MXBankDataTool dayOfMonth:month andYear:year];
-            return repayment_date - day + month_dayCount;
+        NSInteger next_month_dayCount;
+        if (month + 1 == 13) {
+            next_month_dayCount = [MXBankDataTool dayOfMonth:1 andYear:year + 1];
         }else{
-            //当前月有多少天
-            NSInteger month_dayCount = [MXBankDataTool dayOfMonth:month andYear:year];
-            //下一个月有多少天
-            NSInteger next_month_dayCount;
-            if (month + 1 == 13) {
-                next_month_dayCount = [MXBankDataTool dayOfMonth:1 andYear:year + 1];
-            }else{
-                next_month_dayCount = [MXBankDataTool dayOfMonth:month + 1 andYear:year];
-            }
-
-            return month_dayCount + next_month_dayCount - (day - repayment_date);
+            next_month_dayCount = [MXBankDataTool dayOfMonth:month + 1 andYear:year];
         }
         
+        absolutely_Interestfree = next_month_dayCount + repayment_date - account_date;
     }
+    
+    if (day < account_date) {
+        return account_date - day + absolutely_Interestfree;
+    }else{
+        //当前月有多少天
+        NSInteger month_dayCount = [MXBankDataTool dayOfMonth:month andYear:year];
+        return month_dayCount - (day - account_date) + absolutely_Interestfree;
+    }
+    
     return 0;
 }
 
 //获取最好的卡
 +(NSDictionary *)getBestCard:(NSDateComponents *)getDateComponents{
      RLMResults *tempArray = [CreditCard allObjectsInRealm:[RLMRealm defaultRealm]];
-    
+    if (tempArray.count == 0) {
+        return [NSDictionary new];
+    }
     NSInteger mianxi = 0;
     CreditCard *bestCard;
     NSMutableArray *bestCardArr = [[NSMutableArray alloc]init];
