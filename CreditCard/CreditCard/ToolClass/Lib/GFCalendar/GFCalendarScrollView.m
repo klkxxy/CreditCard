@@ -191,15 +191,21 @@ static NSString *const kCellIdentifier = @"cell";
             } else {
                 cell.todayCircle.backgroundColor = [UIColor clearColor];
             }
+            [cell.lineView setHidden:NO];
+            [cell.bankLabel setHidden:NO];
             
         }
         // 补上前后月的日期，淡色显示
         else if (indexPath.row < firstWeekday) {
+            [cell.lineView setHidden:YES];
+            [cell.bankLabel setHidden:YES];
             int totalDaysOflastMonth = [self.monthArray[3] intValue];
             cell.todayLabel.text = [NSString stringWithFormat:@"%ld", totalDaysOflastMonth - (firstWeekday - indexPath.row) + 1];
             cell.todayLabel.textColor = [UIColor colorWithWhite:0.85 alpha:1.0];
             cell.todayCircle.backgroundColor = [UIColor clearColor];
         } else if (indexPath.row >= firstWeekday + totalDays) {
+            [cell.lineView setHidden:YES];
+            [cell.bankLabel setHidden:YES];
             cell.todayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - firstWeekday - totalDays + 1];
             cell.todayLabel.textColor = [UIColor colorWithWhite:0.85 alpha:1.0];
             cell.todayCircle.backgroundColor = [UIColor clearColor];
@@ -231,10 +237,14 @@ static NSString *const kCellIdentifier = @"cell";
             } else {
                 cell.todayCircle.backgroundColor = [UIColor clearColor];
             }
+            [cell.lineView setHidden:NO];
+            [cell.bankLabel setHidden:NO];
             
         }
         // 补上前后月的日期，淡色显示
         else if (indexPath.row < firstWeekday) {
+            [cell.lineView setHidden:YES];
+            [cell.bankLabel setHidden:YES];
             GFCalendarMonth *lastMonthInfo = self.monthArray[0];
             NSInteger totalDaysOflastMonth = lastMonthInfo.totalDays;
             cell.todayLabel.text = [NSString stringWithFormat:@"%ld", totalDaysOflastMonth - (firstWeekday - indexPath.row) + 1];
@@ -242,6 +252,8 @@ static NSString *const kCellIdentifier = @"cell";
             cell.todayCircle.backgroundColor = [UIColor clearColor];
             cell.userInteractionEnabled = NO;
         } else if (indexPath.row >= firstWeekday + totalDays) {
+            [cell.lineView setHidden:YES];
+            [cell.bankLabel setHidden:YES];
             cell.todayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - firstWeekday - totalDays + 1];
             cell.todayLabel.textColor = [UIColor colorWithWhite:0.85 alpha:1.0];
             cell.todayCircle.backgroundColor = [UIColor clearColor];
@@ -272,16 +284,22 @@ static NSString *const kCellIdentifier = @"cell";
             } else {
                 cell.todayCircle.backgroundColor = [UIColor clearColor];
             }
+            [cell.lineView setHidden:NO];
+            [cell.bankLabel setHidden:NO];
             
         }
         // 补上前后月的日期，淡色显示
         else if (indexPath.row < firstWeekday) {
+            [cell.lineView setHidden:YES];
+            [cell.bankLabel setHidden:YES];
             GFCalendarMonth *lastMonthInfo = self.monthArray[1];
             NSInteger totalDaysOflastMonth = lastMonthInfo.totalDays;
             cell.todayLabel.text = [NSString stringWithFormat:@"%ld", totalDaysOflastMonth - (firstWeekday - indexPath.row) + 1];
             cell.todayLabel.textColor = [UIColor colorWithWhite:0.85 alpha:1.0];
             cell.todayCircle.backgroundColor = [UIColor clearColor];
         } else if (indexPath.row >= firstWeekday + totalDays) {
+            [cell.lineView setHidden:YES];
+            [cell.bankLabel setHidden:YES];
             cell.todayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - firstWeekday - totalDays + 1];
             cell.todayLabel.textColor = [UIColor colorWithWhite:0.85 alpha:1.0];
             cell.todayCircle.backgroundColor = [UIColor clearColor];
@@ -307,12 +325,8 @@ static NSString *const kCellIdentifier = @"cell";
 //    CreditCard *bestCard = dic[@"bestCard"];
     NSArray *bestCardArr = dic[@"bestCardArr"];
     NSNumber *mianxi = dic[@"mianxi"];
-    if (mianxi.integerValue == 0) {
-        [cell.lineView setHidden:YES];
-        [cell.bankLabel setHidden:YES];
-    }else{
-        [cell.lineView setHidden:NO];
-        [cell.bankLabel setHidden:NO];
+    if (mianxi.integerValue != 0) {
+        
         if (bestCardArr.count > 1) {
             cell.lineView.backgroundColor = MX_BLACK_COLOR;
             cell.bankLabel.text = [NSString stringWithFormat:@"%ld家%@",bestCardArr.count,mianxi];
@@ -322,7 +336,11 @@ static NSString *const kCellIdentifier = @"cell";
             cell.bankLabel.text = [NSString stringWithFormat:@"%@%@",bestCard.bank_name,mianxi];
         }
         
+    }else{
+        [cell.lineView setHidden:YES];
+        [cell.bankLabel setHidden:YES];
     }
+    
     
     return cell;
     

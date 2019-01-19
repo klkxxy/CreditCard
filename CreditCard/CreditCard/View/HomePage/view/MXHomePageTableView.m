@@ -60,7 +60,7 @@
     GFCalendarView *calendar = [[GFCalendarView alloc] initWithFrameOrigin:origin width:width];
     // 点击某一天的回调
     calendar.didSelectDayHandler = ^(NSInteger year, NSInteger month, NSInteger day) {
-        
+        NSLog(@"%d - %d - %d",year,month,day);
     };
     self.headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, calendar.height)];
     [self.headerView addSubview:calendar];

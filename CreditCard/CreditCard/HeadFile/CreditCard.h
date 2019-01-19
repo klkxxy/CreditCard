@@ -12,6 +12,8 @@
 
 #define CHANNEL @"ios"
 
+#define UMENG_SDK @"5c434cf0f1f5565ffb0015f3"
+
 #define isIOS11 [[UIDevice currentDevice].systemVersion floatValue] >= 11
 // 版本
 #define kSystemVersion [[UIDevice currentDevice].systemVersion floatValue]
@@ -35,32 +37,12 @@
 #define NSNotificationCenter_defaultCenter [NSNotificationCenter defaultCenter]
 #define RightButtonItem(imageName,highimage)  self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(rightAction) image:imageName highImage:highimage];
 
-#define APP_SPACE(float) [LYGlobalDefine getScreenScale:float]
 #define WEAK_SELF(weakSelf) __weak __typeof(&*self) weakSelf = self;
 #define STRONG_SELF(strongSelf) __strong __typeof(&*weakSelf) strongSelf = weakSelf;
 
-#define kWidthRatio         (kScreenWidth/375.0f)
-#define kHeightRatio        1//kHeightRatio()
-#define PCChat_USERDEFAUT [NSUserDefaults standardUserDefaults]
-
-#define USER_DEAFAUTAVATAR    [UIImage imageNamed:@"userDefaultAvatar"]
-#define PCHAT_DEAFAUTPHOTOIMAGE  [UIImage imageNamed:@"photoAndVideoDefault"]
-#define DEAFAUTIMAGE     [UIImage imageNamed:@""] //这里后面使用
 #define NULL_IMAGE [UIImage imageNamed:@""]
-#define PCCCHAT_WEIXIN_NUMBER @"PCChatWeixinNumber"
-#define PCCCHAT_QQ_NUMBER @"PCChatQQNumber"
-#define PCCHATHOME_NAVITABBAR @"PCCahtHome_tabbar"
-#define PCCHATPrivacy_url @"http://m3.leadnewnet.com/index.php?m=about_blagreement"
 
-//云信使用
-#define IOS8            ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 8.0)
-#define UIScreenWidth                              [UIScreen mainScreen].bounds.size.width
-#define UIScreenHeight                             [UIScreen mainScreen].bounds.size.height
-#define UISreenWidthScale   UIScreenWidth / 320
-#define UICommonTableBkgColor UIColorFromRGB(0xe4e7ec)
-#define Message_Font_Size   14        // 普通聊天文字大小
-#define Notification_Font_Size   10   // 通知文字大小
-#define Chatroom_Message_Font_Size 16 // 聊天室聊天文字大小
+
 
 
 

@@ -2,23 +2,27 @@ PODS:
   - IQKeyboardManager (6.2.0)
   - MJExtension (3.0.15.1)
   - SVProgressHUD (2.2.5)
+  - UMengAnalytics-NO-IDFA (4.2.5)
 
 DEPENDENCIES:
   - IQKeyboardManager
   - MJExtension
   - SVProgressHUD (>= 2.1.2)
+  - UMengAnalytics-NO-IDFA
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - IQKeyboardManager
     - MJExtension
     - SVProgressHUD
+    - UMengAnalytics-NO-IDFA
 
 SPEC CHECKSUMS:
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
 
-PODFILE CHECKSUM: 1c4e514c8e99e26f78caf6ec5f04c7448b2f0189
+PODFILE CHECKSUM: 51316ee8b6ce7982bf5efbce2a5bb0a97c8894c7
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.5.3

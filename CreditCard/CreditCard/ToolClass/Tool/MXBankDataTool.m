@@ -107,8 +107,7 @@
         NSInteger month_dayCount = [MXBankDataTool dayOfMonth:month andYear:year];
         return month_dayCount - (day - account_date) + absolutely_Interestfree;
     }
-    
-    return 0;
+
 }
 
 //获取最好的卡

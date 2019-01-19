@@ -12,6 +12,8 @@
 #import "LNNavigationController.h"
 #import "MXHomePageController.h"
 
+#import "UMMobClick/MobClick.h"
+
 @implementation AppDelegate (AppService)
 
 - (void)initKeyBoard{
@@ -31,6 +33,15 @@
     LNNavigationController *nav = [[LNNavigationController alloc] initWithRootViewController:mainTab];
     [UIApplication sharedApplication].keyWindow.rootViewController = nav;
 
+}
+
+//初始化友盟
+- (void)initMobClick
+{
+    UMConfigInstance.appKey = UMENG_SDK;
+    UMConfigInstance.channelId = @"App Store";
+    [MobClick startWithConfigure:UMConfigInstance];//配置以上参数后调用此方法初始化SDK！
+    
 }
 
 

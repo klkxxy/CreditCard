@@ -23,6 +23,16 @@
     
     [self initKeyBoard];
     
+    [self initMobClick];
+    
+    [self initUserNotificationCenter:application];
+    
+    return YES;
+}
+
+
+- (void)initUserNotificationCenter:(UIApplication *)application
+{
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0)
     {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -35,7 +45,8 @@
         [application registerForRemoteNotifications];
     }
     
-    return YES;
 }
+
+
 
 @end

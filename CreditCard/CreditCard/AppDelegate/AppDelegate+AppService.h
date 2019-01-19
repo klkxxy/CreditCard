@@ -15,4 +15,6 @@
 //初始化window
 - (void)initWindow;
 
+- (void)initMobClick;
+
 @end

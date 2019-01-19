@@ -4,6 +4,7 @@ target 'CreditCard' do
 pod 'SVProgressHUD', '>= 2.1.2'
 pod 'MJExtension'
 pod 'IQKeyboardManager'
+pod 'UMengAnalytics-NO-IDFA'#无IDFA版SDK 友盟
 end
 
 

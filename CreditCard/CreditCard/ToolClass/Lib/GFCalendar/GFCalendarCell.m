@@ -45,7 +45,7 @@
 - (UILabel *)bankLabel{
     if (_bankLabel == nil) {
         _bankLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, self.height-5-9, self.width, 9)];
-        _bankLabel.textColor = MX_FONTGRAY_COLOR;
+        _bankLabel.textColor = MX_BLACK_COLOR;
         _bankLabel.font = [UIFont systemFontOfSize:8.0];
         _bankLabel.textAlignment = NSTextAlignmentCenter;
 
