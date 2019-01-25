@@ -46,8 +46,8 @@
                         <constraint firstItem="xv6-Ha-Yna" firstAttribute="leading" secondItem="Dn7-lB-X8p" secondAttribute="leading" constant="15" id="kM7-PB-0hl"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每次开启有效期为30天，如果失效后请关闭后再打开" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-KI-0x5">
-                    <rect key="frame" x="10" y="74" width="355" height="12"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请在添加完所有信用卡后再打开，每次开启有效期为30天，如果失效后请关闭后再打开" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-KI-0x5">
+                    <rect key="frame" x="10" y="74" width="355" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

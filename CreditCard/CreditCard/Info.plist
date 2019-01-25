@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>7</string>
+	<string>10</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -27,17 +27,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSCameraUsageDescription</key>
-	<string>APP需要您的允许,摄像头开启后进行简单的图片拍摄以及视频功能。这些可在“设置”中配置。</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>APP需要您允许使用麦克风,才可进行语音录音操作。这些可在“设置”中配置。</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>APP需要您允许访问图片进行选择上传头像、图片等操作。这些可在“设置”中配置。</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-		<string>remote-notification</string>
-	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
